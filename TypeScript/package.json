@@ -1,19 +1,22 @@
 {
-  "name": "Proyecto1",
+  "name": "proyecto1",
   "version": "0.1.0",
   "description": "My first Project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Not implemented\""
-},
+    "build": "tsc -p tsconfig.json",
+    "start": "node ./build/index.js",
+    "prestart": "npm install && npm run build"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^20.1.0",
     "@typescript-eslint/eslint-plugin": "^5.59.2",
     "@typescript-eslint/parser": "^5.59.2",
     "eslint": "^8.40.0",
     "prettier": "^2.8.8",
+    "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
   }
 }
- 

@@ -17,4 +17,5 @@ return flattened;
 
 const flattenedNumbers = flatten(numbers);
 
-console.log('[Ejercicio 4.3]', flattenedNumbers);
+
+export  {flattenedNumbers};

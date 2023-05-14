@@ -4,15 +4,6 @@ function padLeft(value: string, padding: number | string): string {
     } else {
         return padding + value;
     }
-    }
-
-
-console.log('[Ejercicio 4.2]', `
-${padLeft('', 0)}
-${padLeft('', '')}
-${padLeft('', '')}
-${padLeft('', '')}
-${padLeft('', '')}
-`);
+}
 
 export {padLeft};

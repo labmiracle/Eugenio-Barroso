@@ -4,6 +4,7 @@ import { interrogateAnimal } from "./Ejercicios/Ej-2-4";
 import { someSum } from "./Ejercicios/Ej-3-1";
 import { bankAccount } from "./Ejercicios/Ej-3-2";
 import { computeScore } from "./Ejercicios/Ej-3-3";
+import { defaultGreeting, portugueseGreeting } from "./Ejercicios/Ej-3-4";
 
 //Ejercicio 2.1
 console.log('[Ejercicio 2.1]');
@@ -32,3 +33,6 @@ console.log('[Exercise 3.2]', `Account value: $${bankAccount.money}`);
 
 //Ejercicio 3.3
 console.log('[Ejercicio 3.3]', `zoologico vale ${computeScore('zoo')} puntos.`);
+
+//Ejercicio 3.4
+console.log('[Ejercicio 3.4]', defaultGreeting, portugueseGreeting);

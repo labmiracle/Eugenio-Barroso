@@ -2,6 +2,7 @@ import { padLeft } from "./Ejercicios/Ej-2-2";
 import { flattenedNumbers } from "./Ejercicios/Ej-2-3";
 import { interrogateAnimal } from "./Ejercicios/Ej-2-4";
 import { someSum } from "./Ejercicios/Ej-3-1";
+import { bankAccount } from "./Ejercicios/Ej-3-2";
 
 //Ejercicio 2.1
 console.log('[Ejercicio 2.1]');
@@ -24,3 +25,6 @@ console.log('[Ejercicio 2.4]',
 
 //Ejercicio 3.1
 console.log('[Ejercicio 3.1]', `3 + 6 + 9 === ${someSum}`);
+
+//Ejercicio 3.2
+console.log('[Exercise 3.2]', `Account value: $${bankAccount.money}`);

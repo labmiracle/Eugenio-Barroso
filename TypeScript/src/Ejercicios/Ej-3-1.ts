@@ -9,6 +9,8 @@ function sumArray(numbers: (number | string)[]):number {
         if (typeof number === "string") {
             number = +number;
             onlyNumbers.push(number);
+        } else {
+            onlyNumbers.push(number);
         }
     }
     return onlyNumbers.reduce(add, 0);

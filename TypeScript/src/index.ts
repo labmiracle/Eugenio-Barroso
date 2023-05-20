@@ -6,6 +6,8 @@ import { bankAccount } from "./Ejercicios/Ej-3-2";
 import { computeScore } from "./Ejercicios/Ej-3-3";
 import { defaultGreeting, portugueseGreeting } from "./Ejercicios/Ej-3-4";
 import { layEggs } from "./Ejercicios/Ej-3-5";
+import { capitalize, multiply } from "./Ejercicios/Ej-3-6";
+
 
 //Ejercicio 2.1
 console.log('[Ejercicio 2.1]');
@@ -40,3 +42,6 @@ console.log('[Ejercicio 3.4]', defaultGreeting, portugueseGreeting);
 
 //Ejercicio 3.5
 layEggs(65, "dorado");
+
+//Ejercicio 3.6
+console.log('[Ejercicio 3.6]', capitalize(`habil ${multiply(5, 10)}`));

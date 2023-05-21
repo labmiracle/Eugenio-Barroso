@@ -7,6 +7,8 @@ import { computeScore } from "./Ejercicios/Ej-3-3";
 import { defaultGreeting, portugueseGreeting } from "./Ejercicios/Ej-3-4";
 import { layEggs } from "./Ejercicios/Ej-3-5";
 import { capitalize, multiply } from "./Ejercicios/Ej-3-6";
+import { incrementedByTwo } from "./Ejercicios/Ej-3-7";
+import { findPreciousStones } from "./Ejercicios/Ej-Extra-1";
 
 
 //Ejercicio 2.1
@@ -45,3 +47,7 @@ layEggs(65, "dorado");
 
 //Ejercicio 3.6
 console.log('[Ejercicio 3.6]', capitalize(`habil ${multiply(5, 10)}`));
+
+//Ejercicio 3.7
+console.log('[Ejercicio 3.7]', `[${incrementedByTwo}] debe ser igual a [3,4,5]`);
+

@@ -51,3 +51,6 @@ console.log('[Ejercicio 3.6]', capitalize(`habil ${multiply(5, 10)}`));
 //Ejercicio 3.7
 console.log('[Ejercicio 3.7]', `[${incrementedByTwo}] debe ser igual a [3,4,5]`);
 
+//Ejercicio Extra 1
+console.assert(findPreciousStones("aA", "aAAbbbb") === 3);
+console.assert(findPreciousStones("z", "ZZ") === 0);

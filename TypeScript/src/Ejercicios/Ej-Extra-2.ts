@@ -73,7 +73,7 @@ function playGame(): void {
     console.log("You ran out of guesses. The secret code was:", secretCode);
     gameOver = prompt("Restart game? Y/N").toUpperCase();
     
-    while (gameOver?.toString() !== "Y" || gameOver?.toString() !== "N") { 
+    while (gameOver?.toString() !== "Y" && gameOver?.toString() !== "N") { 
         gameOver = prompt("Restart game? Y/N").toUpperCase();
     }
 };

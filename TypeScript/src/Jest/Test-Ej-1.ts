@@ -10,6 +10,7 @@ Casos extremos a considerar:
 • ¿Qué debería devolver fizzbuzz(0)?
 • ¿Qué debería pasar si a la función se le pasa una cadena?
 */
+
 function fizzBuzz(num: number | string): string {
     let cadena: string;
 
@@ -17,6 +18,9 @@ function fizzBuzz(num: number | string): string {
         num = parseInt(num) 
     };
 
+    if(num === 0){
+        return num.toString();
+    }
     if (num % 3 === 0 && num % 5 === 0){
         cadena = "FizzBuzz";
     } else if (num % 5 === 0) {

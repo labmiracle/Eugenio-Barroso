@@ -43,13 +43,20 @@
 	</footer>
 	<script>
 		const themeToggle = document.getElementById("theme-toggle");
-		const mainContent = document.querySelectorAll(".main-content button");
+		const body = document.body;
+		const navbar = document.querySelector(".navbar");
+		const mainContent = document.querySelector(".main-content");
+		const footer = document.querySelector("footer");
+		const buttons = document.querySelectorAll("button");
 
 		themeToggle.addEventListener("click", () => {
-			for (let i = 0; i < mainContent.length; i++) {
-				mainContent[i].classList.toggle("dark");
+			body.classList.toggle("dark");
+			navbar.classList.toggle("dark");
+			mainContent.classList.toggle("dark");
+			footer.classList.toggle("dark");
+			for (let i = 0; i < buttons.length; i++) {
+				buttons[i].classList.toggle("dark");
 			}
-			themeToggle.classList.toggle("dark");
 		});
 	</script>
 </html>

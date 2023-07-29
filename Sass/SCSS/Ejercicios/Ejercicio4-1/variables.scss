@@ -17,3 +17,17 @@ $text-color-dark: #f0f0f0;
 $border-dark-dark: rgba($base-color-dark, 0.88);
 
 $font-size: 5;
+$days-of-week: "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday";
+
+@function get-day-color($day) {
+	$days-styles: (
+		monday: lightblue,
+		tuesday: lightgreen,
+		wednesday: lightcoral,
+		thursday: lightpink,
+		friday: lightseagreen,
+		saturday: lightsalmon,
+		sunday: lightskyblue,
+	);
+	@return map-get($days-styles, $day);
+}

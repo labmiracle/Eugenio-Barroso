@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="./css/main.css" />
 		<title>Practica Sass</title>
 	</head>
-	<nav id="theme-toggle" class="navbar">
+	<nav class="navbar">
 		<div class="logo">
 			<img src="logo.png" alt="Logo" />
 		</div>
@@ -15,30 +15,40 @@
 			<li><a href="#">Ejercicio-1</a></li>
 			<li><a href="#">Ejercicio-2</a></li>
 		</ul>
-		<button class="button-secondary light">Cambiar Tema</button>
+		<button id="theme-toggle" class="button-secondary light">Cambiar Tema</button>
 	</nav>
 
 	<div class="main-content">
 		<h2>Bienvenido a la Practica de Sass</h2>
 		<p>Tenemos colores variables</p>
 
-		<div class="buttons-container">
-			<button class="button-primary light">Boton primario</button>
-			<button class="button-secondary light">Boton secundario</button>
-			<button class="button-success light">boton exito</button>
-			<button class="button-danger light">boton peligro</button>
+		<button class="button-primary light">Boton primario</button>
+		<button class="button-secondary light">Boton secundario</button>
+		<button class="button-success light">boton exito</button>
+		<button class="button-danger light">boton peligro</button>
+
+		<div>
+			<h2 class="monday">Monday</h2>
+			<h2 class="tuesday">Tuesday</h2>
+			<h2 class="wednesday">Wednesday</h2>
+			<h2 class="thursday">Thursday</h2>
+			<h2 class="friday">Friday</h2>
+			<h2 class="saturday">Saturday</h2>
+			<h2 class="sunday">Sunday</h2>
 		</div>
 	</div>
 
-	<footer id="theme-toggle">
+	<footer>
 		<p>No hay derechos de autor &copy; 2023 | miracleLab</p>
 	</footer>
 	<script>
 		const themeToggle = document.getElementById("theme-toggle");
-		const mainContent = document.querySelector(".main-content");
+		const mainContent = document.querySelectorAll(".main-content button");
 
 		themeToggle.addEventListener("click", () => {
-			mainContent.classList.toggle("dark");
+			for (let i = 0; i < mainContent.length; i++) {
+				mainContent[i].classList.toggle("dark");
+			}
 			themeToggle.classList.toggle("dark");
 		});
 	</script>

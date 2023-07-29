@@ -24,3 +24,14 @@
 	background-color: $background-color-dark;
 	color: $text-color-dark;
 }
+
+@each $day in $days-of-week {
+	.#{$day} {
+		background-color: get-day-color($day);
+
+		padding: 10px;
+		margin: 5px;
+		border-radius: 5px;
+		color: #333;
+	}
+}

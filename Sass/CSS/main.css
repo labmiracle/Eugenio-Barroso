@@ -10,7 +10,8 @@
   border: none;
   border-radius: 4px;
   color: #fff;
-  cursor: pointer; }
+  cursor: pointer;
+  background-color: #00ecc5; }
 
 .button-primary.light {
   background-color: #00ecc5; }
@@ -69,3 +70,52 @@
 .main-content.dark {
   background-color: #222;
   color: #f0f0f0; }
+
+.monday {
+  background-color: lightblue;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  color: #333; }
+
+.tuesday {
+  background-color: lightgreen;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  color: #333; }
+
+.wednesday {
+  background-color: lightcoral;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  color: #333; }
+
+.thursday {
+  background-color: lightpink;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  color: #333; }
+
+.friday {
+  background-color: lightseagreen;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  color: #333; }
+
+.saturday {
+  background-color: lightsalmon;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  color: #333; }
+
+.sunday {
+  background-color: lightskyblue;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  color: #333; }

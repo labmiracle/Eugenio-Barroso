@@ -1,2 +1,19 @@
-$base-color: #00ecc5;
-$border-dark: rgba($base-color, 0.88);
+// Light Theme
+$base-color-light: #00ecc5;
+$secondary-color-light: #ab59b6;
+$success-color-light: green;
+$danger-color-light: red;
+$text-color-light: black;
+$border-dark-light: rgba($base-color-light, 0.88);
+$background-color-light: $border-dark-light;
+
+// Dark Theme
+$base-color-dark: #011f1a;
+$secondary-color-dark: #48254d;
+$success-color-dark: #125212;
+$danger-color-dark: #6e0216;
+$background-color-dark: #222;
+$text-color-dark: #f0f0f0;
+$border-dark-dark: rgba($base-color-dark, 0.88);
+
+$font-size: 5;

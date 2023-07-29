@@ -3,79 +3,43 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/main.css" />
 		<title>Practica Sass</title>
 	</head>
-	<body>
-		<head>
-			<section id="master">
-				<article class="miracle-1">
-					<div class="conteiner">
-						<div class="info">
-							<p>Hola Miracle</p>
-							<img src="https://via.placeholder.com/100x100" />
-						</div>
-						<button class="btn btnC">Comprar</button>
-					</div>
-				</article>
-				<article class="miracle-1">
-					<div class="conteiner">
-						<div class="info">
-							<p>Hola Miracle</p>
-							<img src="https://via.placeholder.com/100x100" />
-						</div>
-						<button class="btn btnC">Comprar</button>
-					</div>
-				</article>
-				<article class="miracle-1">
-					<div class="conteiner">
-						<div class="info">
-							<p>Hola Miracle</p>
-							<img src="https://via.placeholder.com/100x100" />
-						</div>
-						<button class="btn btnC">Comprar</button>
-					</div>
-				</article>
-				<article class="miracle-1">
-					<div class="conteiner">
-						<div class="info">
-							<p>Hola Miracle</p>
-							<img src="https://via.placeholder.com/100x100" />
-						</div>
-						<button class="btn btnC">Comprar</button>
-					</div>
-				</article>
-				<article class="miracle-1">
-					<div class="conteiner">
-						<div class="info">
-							<p>Hola Miracle</p>
-							<img src="https://via.placeholder.com/100x100" />
-						</div>
-						<button class="btn btnC">Comprar</button>
-					</div>
-				</article>
-				<article class="miracle-1">
-					<div class="conteiner">
-						<div class="info">
-							<p>Hola Miracle</p>
-							<img src="https://via.placeholder.com/100x100" />
-						</div>
-						<button class="btn btnC">Comprar</button>
-					</div>
-				</article>
-			</section>
+	<nav id="theme-toggle" class="navbar">
+		<div class="logo">
+			<img src="logo.png" alt="Logo" />
+		</div>
+		<ul class="btn">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Ejercicio-1</a></li>
+			<li><a href="#">Ejercicio-2</a></li>
+		</ul>
+		<button class="button-secondary light">Cambiar Tema</button>
+	</nav>
 
-			<section id="container-days">
-				<ul class="days">
-					<li class="Lunes"><p>Lunes</p></li>
-					<li class="Martes"><p>Martes</p></li>
-					<li class="Miércoles"><p>Miercoles</p></li>
-					<li class="Jueves"><p>Jueves</p></li>
-					<li class="Viernes"><p>Viernes</p></li>
-					<li class="Sábado"><p>Sabado</p></li>
-					<li class="Domingo"><p>Domingo</p></li>
-				</ul>
-			</section>
-		</head>
-	</body>
+	<div class="main-content">
+		<h2>Bienvenido a la Practica de Sass</h2>
+		<p>Tenemos colores variables</p>
+
+		<div class="buttons-container">
+			<button class="button-primary light">Boton primario</button>
+			<button class="button-secondary light">Boton secundario</button>
+			<button class="button-success light">boton exito</button>
+			<button class="button-danger light">boton peligro</button>
+		</div>
+	</div>
+
+	<footer id="theme-toggle">
+		<p>No hay derechos de autor &copy; 2023 | miracleLab</p>
+	</footer>
+	<script>
+		const themeToggle = document.getElementById("theme-toggle");
+		const mainContent = document.querySelector(".main-content");
+
+		themeToggle.addEventListener("click", () => {
+			mainContent.classList.toggle("dark");
+			themeToggle.classList.toggle("dark");
+		});
+	</script>
 </html>

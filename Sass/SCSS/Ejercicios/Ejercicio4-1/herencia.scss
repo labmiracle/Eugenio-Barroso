@@ -1,0 +1,50 @@
+// Estilos para los botones
+.button {
+	padding: 10px 20px;
+	font-size: 36px;
+	border: none;
+	border-radius: 4px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.button-primary.light {
+	@extend .button;
+	background-color: $base-color-light;
+}
+
+.button-secondary.light {
+	@extend .button;
+	background-color: $secondary-color-light;
+}
+
+.button-success.light {
+	@extend .button;
+	background-color: $success-color-light;
+}
+
+.button-danger.light {
+	@extend .button;
+	background-color: $danger-color-light;
+}
+
+// Estilos para los botones en el tema oscuro
+.button-primary.dark {
+	@extend .button;
+	background-color: $base-color-dark;
+}
+
+.button-secondary.dark {
+	@extend .button;
+	background-color: $secondary-color-dark;
+}
+
+.button-success.dark {
+	@extend .button;
+	background-color: $success-color-dark;
+}
+
+.button-danger.dark {
+	@extend .button;
+	background-color: $danger-color-dark;
+}

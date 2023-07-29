@@ -7,10 +7,10 @@
 			.info {
 				& p {
 					font-size: $font-size;
-					color: $base-color;
+					color: $base-color-light;
 				}
 				& img {
-					@include border-properties(1px solid, 15px);
+					@include border-properties(1px, solid, 15px);
 				}
 			}
 		}

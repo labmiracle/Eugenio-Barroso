@@ -1,0 +1,26 @@
+@import "./Ejercicios/Ejercicio2-1.scss";
+@import "./Ejercicios/Ejercicio4-1/variables.scss";
+@import "./Ejercicios/Ejercicio4-1/nesting.scss";
+@import "./Ejercicios/Ejercicio4-1/mixins.scss";
+@import "./Ejercicios/Ejercicio4-1/herencia.scss";
+@import "./Ejercicios/Ejercicio4-1/operadores.scss";
+@import "./styles";
+
+.navbar.light {
+	background-color: $base-color-light;
+	color: $secondary-color-light;
+}
+.navbar.dark {
+	background-color: $base-color-dark;
+	color: $secondary-color-dark;
+}
+
+.main-content.light {
+	background-color: $background-color-light;
+	color: $text-color-light;
+}
+
+.main-content.dark {
+	background-color: $background-color-dark;
+	color: $text-color-dark;
+}

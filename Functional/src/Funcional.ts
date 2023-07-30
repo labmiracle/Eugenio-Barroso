@@ -174,12 +174,50 @@ function getFemaleChars() {
 	return femaleChars;
 }
 
-/*
-Función sort
-1. Ordenar por nombre
-2. Ordenar por masa
-3. Ordenar por altura
-4. Ordenar por género
-*/
+//Función sort
 
-export {};
+//1. Ordenar por nombre
+function nameSort() {
+	const sortedNames = characters.sort((a, b) => (a.name > b.name ? 1 : -1));
+	return sortedNames;
+}
+
+//2. Ordenar por masa
+function massSort() {
+	const sortedMasses = characters.sort((a, b) => (a.mass > b.mass ? 1 : -1));
+	return sortedMasses;
+}
+
+//3. Ordenar por altura
+function heightSort() {
+	const sortedHeights = characters.sort((a, b) => (a.height > b.height ? 1 : -1));
+	return sortedHeights;
+}
+
+//4. Ordenar por género
+function genderSort() {
+	const sortedGenders = characters.sort((a, b) => {
+		if (a.gender > b.gender) {
+			return 1;
+		} else {
+			return -1;
+		}
+	});
+	return sortedGenders;
+}
+export {
+	allHeight,
+	allNames,
+	allHeightNames,
+	nameTotalChars,
+	totalHeight,
+	totalmass,
+	massSupHundred,
+	heightless200,
+	getMaleChars,
+	getFemaleChars,
+	nameSort,
+	heightSort,
+	massSort,
+	genderSort,
+};

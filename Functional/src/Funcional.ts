@@ -28,21 +28,7 @@ const characters = [
 		gender: "male",
 	},
 ];
-/*
 
-
-
-Función every
-1. ¿Todos los personajes tienen ojos azules?
-2. ¿Todos los personajes tienen una masa superior a 40?
-3. ¿Todos los caracteres son más bajos que 200?
-4. ¿Todos los personajes son hombres?
-Función some
-1. ¿Hay al menos un personaje masculino?
-2. ¿Hay al menos un personaje con ojos azules?
-3. ¿Hay al menos un personaje más alto que 200?
-4. ¿Hay al menos un personaje que tenga una masa inferior a 50?
-*/
 //map
 //1. Obtener un arreglo de todos los nombres
 function allNames(): string[] {
@@ -205,6 +191,46 @@ function genderSort() {
 	});
 	return sortedGenders;
 }
+
+//Función every
+//1. ¿Todos los personajes tienen ojos azules?
+function everyBlueEyes() {
+	const blueEyeCharacters: boolean = characters.every(character => character.eye_color === "blue");
+	return blueEyeCharacters;
+}
+
+//2. ¿Todos los personajes tienen una masa superior a 40?
+function everyMassSup(supMass: number) {
+	const massHigherThan: boolean = characters.every(character => Number(character.mass) > supMass);
+	return massHigherThan;
+}
+
+//3. ¿Todos los caracteres son más bajos que 200?
+function everyHeightLessThan(lessHeight: number) {
+	const heightLowerThan: boolean = characters.every(character => Number(character.height) > lessHeight);
+	return heightLowerThan;
+}
+
+//4. ¿Todos los personajes son hombres?
+function everyGenderIs(isGender: string) {
+	const genderCheck: boolean = characters.every(character => character.gender === isGender);
+	return genderCheck;
+}
+
+/*
+Función some
+
+2. ¿Hay al menos un personaje con ojos azules?
+3. ¿Hay al menos un personaje más alto que 200?
+4. ¿Hay al menos un personaje que tenga una masa inferior a 50?
+*/
+
+//1. ¿Hay al menos un personaje masculino?
+function someGender(isGender) {
+	const hasSomeGender: boolean = characters.some(character => character.gender === isGender);
+	return hasSomeGender;
+}
+
 export {
 	allHeight,
 	allNames,

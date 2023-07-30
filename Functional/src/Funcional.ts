@@ -217,18 +217,29 @@ function everyGenderIs(isGender: string) {
 	return genderCheck;
 }
 
-/*
-Función some
-
-2. ¿Hay al menos un personaje con ojos azules?
-3. ¿Hay al menos un personaje más alto que 200?
-4. ¿Hay al menos un personaje que tenga una masa inferior a 50?
-*/
-
+//Función some
 //1. ¿Hay al menos un personaje masculino?
-function someGender(isGender) {
+function someGender(isGender: string): boolean {
 	const hasSomeGender: boolean = characters.some(character => character.gender === isGender);
 	return hasSomeGender;
+}
+
+//2. ¿Hay al menos un personaje con ojos azules?
+function someEyeColor(isEyeColor: string): boolean {
+	const eyeColorsFound: boolean = characters.some(character => character.eye_color === isEyeColor);
+	return eyeColorsFound;
+}
+
+//3. ¿Hay al menos un personaje más alto que 200?
+function someSupHeight(supHeight: number): boolean {
+	const heightHigherThan: boolean = characters.some(character => Number(character.height) > supHeight);
+	return heightHigherThan;
+}
+
+//4. ¿Hay al menos un personaje que tenga una masa inferior a 50?
+function someInfMass(infMass: number): boolean {
+	const massLowerThan: boolean = characters.some(character => Number(character.mass) < infMass);
+	return massLowerThan;
 }
 
 export {

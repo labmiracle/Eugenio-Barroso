@@ -30,16 +30,8 @@ const characters = [
 ];
 /*
 
-Función filter
-1. Obtener personajes con masa superior a 100
-2. Obtener personajes con una altura inferior a 200
-3. Obtener todos los personajes masculinos
-4. Obtener todos los personajes femeninos
-Función sort
-1. Ordenar por nombre
-2. Ordenar por masa
-3. Ordenar por altura
-4. Ordenar por género
+
+
 Función every
 1. ¿Todos los personajes tienen ojos azules?
 2. ¿Todos los personajes tienen una masa superior a 40?
@@ -115,5 +107,79 @@ function totalCharsPerEyeColor() {
 			return accum + current;
 		}
 }*/
+
+//Función filter
+
+//1. Obtener personajes con masa superior a 100
+function massSupHundred() {
+	const chars: {
+		name: string;
+		height: string;
+		mass: string;
+		eye_color: string;
+		gender: string;
+	}[] = characters.filter(char => {
+		if (Number(char.mass) > 100) {
+			return char;
+		}
+	});
+	return chars;
+}
+
+//2. Obtener personajes con una altura inferior a 200
+function heightless200() {
+	const chars: {
+		name: string;
+		height: string;
+		mass: string;
+		eye_color: string;
+		gender: string;
+	}[] = characters.filter(char => {
+		if (Number(char.height) < 200) {
+			return char;
+		}
+	});
+	return chars;
+}
+
+//3. Obtener todos los personajes masculinos
+function getMaleChars() {
+	const maleChars: {
+		name: string;
+		height: number;
+		mass: number;
+		eye_color: string;
+		gender: string;
+	}[] = characters.filter(char => {
+		if (char.gender === "male") {
+			return char;
+		}
+	});
+	return maleChars;
+}
+
+//4. Obtener todos los personajes femeninos
+function getFemaleChars() {
+	const femaleChars: {
+		name: string;
+		height: number;
+		mass: number;
+		eye_color: string;
+		gender: string;
+	}[] = characters.filter(char => {
+		if (char.gender === "female") {
+			return char;
+		}
+	});
+	return femaleChars;
+}
+
+/*
+Función sort
+1. Ordenar por nombre
+2. Ordenar por masa
+3. Ordenar por altura
+4. Ordenar por género
+*/
 
 export {};

@@ -161,7 +161,6 @@ function getFemaleChars() {
 }
 
 //Función sort
-
 //1. Ordenar por nombre
 function nameSort() {
 	const sortedNames = characters.sort((a, b) => (a.name > b.name ? 1 : -1));
@@ -257,4 +256,12 @@ export {
 	heightSort,
 	massSort,
 	genderSort,
+	everyBlueEyes,
+	everyGenderIs,
+	everyHeightLessThan,
+	everyMassSup,
+	someEyeColor,
+	someGender,
+	someInfMass,
+	someSupHeight,
 };

@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import NavBar from "./components/NavBar";
+import Props from "./components/Props/Props";
+import State from "./components/State/State";
+import Events from "./components/Events/Events";
+import ConditionalRender from "./components/Conditional-Render/ConditionalRender";
+import Refs from "./components/Refs/Refs";
+import Context from "./components/Context/Context";
+import DataFetched from "./components/HOC/Hoc";
+/*
+import State from "./components/State";
+import RenderCondi from "./components/Renderizado-Condicional/RenderCondi";
+import Refs from "./components/Refs/Refs";
+import PaitingList from "./components/PaintingList/PaitingList";
+import Hooks from "./components/Hooks/Hooks";
+import Hoc from "./components/HOC/Hoc";
+import Events from "./components/Events/Events";
+import Context from "./components/Context/Context";*/
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <BrowserRouter>
+      <NavBar />
+
+      <Routes>
+        <Route path="/Props" element={<Props />} />
+        <Route path="/State" element={<State />} />
+        <Route path="/Events" element={<Events />} />
+        <Route path="/Conditional-Render" element={<ConditionalRender />} />
+        <Route path="/Refs" element={<Refs />} />
+        <Route path="/Context" element={<Context />} />
+        <Route
+          path="/HOC"
+          element={
+            <DataFetched url="https://jsonplaceholder.typicode.com/posts" />
+          }
+        />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

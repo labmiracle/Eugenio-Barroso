@@ -1,0 +1,130 @@
+{
+  "info": {
+    "_postman_id": "59302b27-4c9d-4ae9-af2b-78db1b5d29fb",
+    "name": "MiracleLab",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+    "_exporter_id": "29233024"
+  },
+  "item": [
+    {
+      "name": "Check API health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{url}}/zen"
+      },
+      "response": []
+    },
+    {
+      "name": "verify user info",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{url}}/users/{{username}}"
+      },
+      "response": []
+    },
+    {
+      "name": "Create Repo",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n           \"name\": \"MiracleLab API Repo\",\r\n           \"private\": true,\r\n           \"auto_init\": true,\r\n           \"incorrecto\": \"nanoc\"\r\n}"
+        },
+        "url": "{{url}}/user/repos"
+      },
+      "response": []
+    },
+    {
+      "name": "Post issues",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\": \"New logo\",\r\n    \"body\": \"We should have one\",\r\n    \"labels\": []\r\n}\r\n"
+        },
+        "url": {
+          "raw": "{{url}}/repos/:user/:reponame/issues",
+          "host": ["{{url}}"],
+          "path": ["repos", ":user", ":reponame", "issues"],
+          "variable": [
+            {
+              "key": "user",
+              "value": "{{username}}"
+            },
+            {
+              "key": "reponame",
+              "value": "{{reponame}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete repo",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{url}}/repos/:user/:repoName/issues",
+          "host": ["{{url}}"],
+          "path": ["repos", ":user", ":repoName", "issues"],
+          "variable": [
+            {
+              "key": "user",
+              "value": "{{username}}"
+            },
+            {
+              "key": "repoName",
+              "value": "{{repoName}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": {
+      "token": "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"
+    }
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "url",
+      "value": "https://api.github.com",
+      "type": "string"
+    },
+    {
+      "key": "username",
+      "value": "eugeAsc",
+      "type": "string"
+    },
+    {
+      "key": "repoName",
+      "value": "githubApiTest",
+      "type": "string"
+    }
+  ]
+}

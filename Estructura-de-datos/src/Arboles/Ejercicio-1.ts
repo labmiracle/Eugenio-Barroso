@@ -125,11 +125,11 @@ binaryTree.insert(2);
 binaryTree.insert(3);
 binaryTree.insert(4);
 binaryTree.insert(7);
-console.log("Recorrido en orden:");
+console.log("Recorrido en orden: ");
 binaryTree.inOrderTraversal(binaryTree.root);
 console.log(
-  "Número de elementos en el árbol:",
+  "Número de elementos en el árbol: ",
   binaryTree.GetSize(binaryTree.root)
 );
-console.log("Valor mínimo en el árbol:", binaryTree.findMin(binaryTree.root));
-console.log("Valor máximo en el árbol:", binaryTree.findMax(binaryTree.root));
+console.log("Valor mínimo en el árbol: ", binaryTree.findMin(binaryTree.root));
+console.log("Valor máximo en el árbol: ", binaryTree.findMax(binaryTree.root));
